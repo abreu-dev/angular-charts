@@ -3,6 +3,7 @@
 <div>
     <button class="btn btn-info" (click)="displayNgxCharts()">NGX Charts</button>
     <button class="btn btn-info" (click)="displayNgxECharts()">NGX ECharts</button>
+    <button class="btn btn-info" (click)="displayHighCharts()">HighCharts</button>
 </div>
 
 <div class="charts" *ngIf="isDisplayingNgxCharts">
@@ -13,4 +14,8 @@
 
 <div class="charts" *ngIf="isDisplayingNgxECharts">
     <app-example-03></app-example-03>
+</div>
+
+<div class="charts" *ngIf="isDisplayingHighCharts">
+    <app-example-04></app-example-04>
 </div>

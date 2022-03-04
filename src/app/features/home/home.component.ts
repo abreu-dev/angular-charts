@@ -9,6 +9,7 @@ export class HomeComponent {
   public title: string;
   public isDisplayingNgxCharts: boolean;
   public isDisplayingNgxECharts: boolean;
+  public isDisplayingHighCharts: boolean;
 
   constructor() {
     this.displayNgxCharts();
@@ -18,11 +19,20 @@ export class HomeComponent {
     this.title = 'NGX Charts';
     this.isDisplayingNgxCharts = true;
     this.isDisplayingNgxECharts = false;
+    this.isDisplayingHighCharts = false;
   }
 
   public displayNgxECharts(): void {
     this.title = 'NGX ECharts';
     this.isDisplayingNgxECharts = true;
+    this.isDisplayingNgxCharts = false;
+    this.isDisplayingHighCharts = false;
+  }
+
+  public displayHighCharts(): void {
+    this.title = 'HighCharts';
+    this.isDisplayingHighCharts = true;
+    this.isDisplayingNgxECharts = false;
     this.isDisplayingNgxCharts = false;
   }
 }
