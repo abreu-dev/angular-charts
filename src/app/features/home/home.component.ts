@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 export class HomeComponent {
   public title: string;
   public isDisplayingNgxCharts: boolean;
-  public isDisplayingChartJs: boolean;
+  public isDisplayingNgxECharts: boolean;
 
   constructor() {
     this.displayNgxCharts();
@@ -17,12 +17,12 @@ export class HomeComponent {
   public displayNgxCharts(): void {
     this.title = 'NGX Charts';
     this.isDisplayingNgxCharts = true;
-    this.isDisplayingChartJs = false;
+    this.isDisplayingNgxECharts = false;
   }
 
-  public displayChartJs(): void {
-    this.title = 'Chart JS';
-    this.isDisplayingChartJs = true;
+  public displayNgxECharts(): void {
+    this.title = 'NGX ECharts';
+    this.isDisplayingNgxECharts = true;
     this.isDisplayingNgxCharts = false;
   }
 }
