@@ -1,7 +1,16 @@
-<h1>Welcome!</h1>
+<h1>{{ title }}</h1>
 
-<div class="charts">
+<div>
+    <button class="btn btn-info" (click)="displayNgxCharts()">NGX Charts</button>
+    <button class="btn btn-info" (click)="displayChartJs()">Chart JS</button>
+</div>
+
+<div class="charts" *ngIf="isDisplayingNgxCharts">
     <app-example-01></app-example-01>
     <hr/>
     <app-example-02></app-example-02>
+</div>
+
+<div class="charts" *ngIf="isDisplayingChartJs">
+    <app-example-03></app-example-03>
 </div>

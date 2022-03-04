@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { multi } from '../../utils/data';
+import { multiNgxChart } from '../../utils/data';
 import { Utils } from '../../utils/utils';
 
 @Component({
@@ -17,6 +17,6 @@ export class Example01Component {
   showXAxis: boolean = true;
   showYAxis: boolean = true;
   timeline: boolean = true;
-  colorScheme = { domain: Utils.colors({count: multi.length}) };
-  data = multi;
+  colorScheme = { domain: Utils.colors({count: multiNgxChart.length}) };
+  data = multiNgxChart;
 }

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 
-import { single } from '../../utils/data';
+import { singleNgxChart } from '../../utils/data';
 import { Utils } from '../../utils/utils';
 
 @Component({
@@ -17,6 +17,6 @@ export class Example02Component {
   showXAxis: boolean = true;
   showYAxis: boolean = true;
   timeline: boolean = true;
-  colorScheme = { domain: Utils.colors({count: single.length}) };
-  data = single;
+  colorScheme = { domain: Utils.colors({count: singleNgxChart.length}) };
+  data = singleNgxChart;
 }

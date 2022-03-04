@@ -5,7 +5,7 @@ const NUMBER_CONFIG = {min: 0, max: 300};
 const MONTHS = Utils.months({count: DATA_COUNT});
 const COUNTRIES = Utils.countries({count: 4});
 
-const multiData = [];
+const multiDataNgxChart = [];
 
 COUNTRIES.forEach((country: string) => {
   const dataset = { "name": country, "series": [] };
@@ -14,17 +14,17 @@ COUNTRIES.forEach((country: string) => {
     dataset.series.push({ "name": MONTHS[i], value: Utils.number(NUMBER_CONFIG)})
   }
 
-  multiData.push(dataset);
+  multiDataNgxChart.push(dataset);
 });
 
-export var multi = multiData;
+export var multiNgxChart = multiDataNgxChart;
 
-const singleData = [];
+const singleDataNgxChart = [];
 
 COUNTRIES.forEach((country: string) => {
-  const value = multiData.find(x => x.name == country).series[DATA_COUNT - 1].value;
-  singleData.push({ "name": country, value: value});
+  const value = multiDataNgxChart.find(x => x.name == country).series[DATA_COUNT - 1].value;
+  singleDataNgxChart.push({ "name": country, value: value});
 });
 
-export var single = singleData;
+export var singleNgxChart = singleDataNgxChart;
   
